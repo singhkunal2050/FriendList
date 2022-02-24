@@ -6,7 +6,7 @@ function AddFriend() {
 
   const addFriend = (e) => {
     e.preventDefault();
-    if (friend.name !== "") {
+    if (friend !== "") {
       setFriends([
         ...friends,
         { id: friends.length + 1, name: friend, star: false },
