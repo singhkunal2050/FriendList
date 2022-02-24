@@ -8,7 +8,7 @@ function FriendList() {
 
   const [friends, setFriends] = useState([
     { id: 1, name: "John", star: true },
-    { id: 2, name: "Mary", star: true },
+    { id: 2, name: "Mary", star: false },
     { id: 3, name: "Peter", star: false },
   ]);
   const [friend, setFriend] = useState("");

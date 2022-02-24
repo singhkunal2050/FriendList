@@ -10,10 +10,14 @@ function AddFriend() {
       setFriends([
         ...friends,
         { id: friends.length + 1, name: friend, star: false },
-      ]);
+      ].sort(function (x, y) {
+        return (x.star === y.star) ? 0 : x.star ? -1 : 1;
+      }));
+
+
       console.log(friends);
       setFriend("");
-    }else{
+    } else {
       alert("Please enter a name");
     }
   };

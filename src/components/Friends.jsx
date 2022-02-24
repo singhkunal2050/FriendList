@@ -9,7 +9,9 @@ function Friends() {
     setFriends(
       friends.map((friend) =>
         friend.id === id ? { ...friend, star: !friend.star } : friend
-      )
+      ).sort(function (x, y) {
+        return (x.star === y.star) ? 0 : x.star ? -1 : 1;
+      })
     );
   };
 
