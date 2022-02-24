@@ -12,10 +12,11 @@ function FriendList() {
     { id: 3, name: "Peter", star: false },
   ]);
   const [friend, setFriend] = useState("");
+  const [search, setSearch] = useState("");
 
   return (
     <div className="friend-list">
-      <FriendsContext.Provider value={{friend, setFriend, friends, setFriends}}>
+      <FriendsContext.Provider value={{friend, setFriend, friends, setFriends , search, setSearch}}>
         <Header />
         <AddFriend />
         <Friends />
