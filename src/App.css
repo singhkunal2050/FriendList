@@ -1,0 +1,62 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.friend-list{
+    max-width: 600px;
+    margin-inline: auto;
+    padding-block: 20px;
+}
+
+.friend-list header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #1d1d1d;
+    color: white;
+    padding: 1rem;
+}
+.friend-list header h2{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.friend-list header .search{
+    padding: .5rem;
+    display: block;
+    max-width: 70%;
+}
+
+
+.friend-card{
+    display: flex;
+    justify-content: space-evenly;
+    background: #efefef;
+    border: 2px solid rgb(223, 223, 223);
+
+}
+
+.friend-card p{
+    padding: 1rem;
+    margin-block: 0;
+}
+
+.friend-card p:not(:first-child):hover{
+    background: #d4d2d2;
+}
+
+
+.friend-card p:first-child{
+    flex: .8;
+}
+
+
+.add-friend-input{
+    padding: 1rem;
+    width: -webkit-fill-available;
+}
