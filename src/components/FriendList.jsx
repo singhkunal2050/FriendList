@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import AddFriend from "./AddFriend";
 import Friends from "./Friends";
-import { AiFillSmile } from 'react-icons/ai';
+import Header from "./Header";
+import { FriendsContext } from "../contexts/friendsContext";
 
 function FriendList() {
+
+  const [friends, setFriends] = useState([
+    { id: 1, name: "John", star: true },
+    { id: 2, name: "Mary", star: true },
+    { id: 3, name: "Peter", star: false },
+  ]);
+  const [friend, setFriend] = useState("");
+
   return (
     <div className="friend-list">
-      <header>
-          <h2>Friendlist
-            <AiFillSmile/>
-          </h2>
-          <div className="searchbox">
-            <input type="text" className="search" placeholder="Search Friend"/>
-          </div>
-      </header>
-      <AddFriend />
-      <Friends />
+      <FriendsContext.Provider value={{friend, setFriend, friends, setFriends}}>
+        <Header />
+        <AddFriend />
+        <Friends />
+      </FriendsContext.Provider>
     </div>
   );
 }
