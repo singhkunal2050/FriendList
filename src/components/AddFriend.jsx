@@ -7,7 +7,6 @@ function AddFriend() {
     {id:2 , name:"Mary", star:true},
     {id:3 , name:"Peter" , star:false},
   ]);
-
   const [friend , setFriend] = useState('')
 
   const addFriend = (e) => {
